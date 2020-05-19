@@ -23,7 +23,9 @@ public class BooksLibraryServiceImpl{
 	@Autowired
 	private BookLibrabryRepository bookRepository;
 	
-	
+	/** This method will load all book details
+	 * @return BookLibraryRequest list
+	 */
 	public List<BookLibraryRequest> loadAllBooksfromLibrary(){
 		List<BookLibraryRequest> booksLists =new ArrayList<BookLibraryRequest>();
 			try{
@@ -44,7 +46,11 @@ public class BooksLibraryServiceImpl{
 		return booksLists;
 	}
 	
-	
+	/** This method will update the book details based on the book ref number
+	 * @param request
+	 * @param bookId
+	 * @return
+	 */
 	public Integer updateBook(BookLibraryRequest request,String bookId){
 		Integer result=0;
 		try{
